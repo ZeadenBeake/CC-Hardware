@@ -1,7 +1,7 @@
 package org.zeaden.ccHardware;
 
+import dan200.computercraft.api.peripheral.PeripheralLookup;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.world.item.Item;
 
 public class CcHardware implements ModInitializer {
 
@@ -11,5 +11,9 @@ public class CcHardware implements ModInitializer {
         ModItems.initialize();
         ModBlocks.initialize();
         ModBlockEntities.initialize();
+        PeripheralLookup.get().registerForBlockEntity(
+                ComputerCaseBlockEntity::getPeripheral,
+                ModBlockEntities.COMPUTER_CASE_BLOCK_ENTITY
+        );
     }
 }
