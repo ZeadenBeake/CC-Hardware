@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "cc-hardware",
+  "version": "${version}",
+
+  "name": "CC:Hardware",
+  "description": "This mod brings the sounds and system configuration of the original OpenComputers to the ComputerCraft ecosystem.",
+  "authors": [],
+  "contact": {},
+
+  "license": "unlicense",
+  "icon": "assets/cc-hardware/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": ["org.zeaden.ccHardware.client.CcHardwareDataGenerator"],
+    "client": ["org.zeaden.ccHardware.client.CcHardwareClient"],
+    "main": ["org.zeaden.ccHardware.CcHardware"]
+  },
+
+  "mixins": [
+    "cc-hardware.mixins.json"
+    ,{
+      "config": "cc-hardware.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
