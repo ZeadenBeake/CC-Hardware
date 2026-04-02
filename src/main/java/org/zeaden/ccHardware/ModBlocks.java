@@ -44,7 +44,11 @@ public class ModBlocks {
         return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(CcHardware.MOD_ID, name));
     }
 
-    public static void initialize() {};
+    public static void initialize() {
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register((itemGroup) -> {
+            itemGroup.accept(ModBlocks.COMPUTER_CASE.asItem());
+        });
+    };
 
     public static final Block COMPUTER_CASE = register(
             "computer_case",
@@ -52,8 +56,4 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().sound(SoundType.IRON),
             true
     );
-
-    ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register((itemGroup) -> {
-        itemGroup.accept(ModBlocks.COMPUTER_CASE.asItem());
-    });
 }
