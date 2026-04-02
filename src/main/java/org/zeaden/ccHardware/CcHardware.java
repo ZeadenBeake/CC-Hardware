@@ -10,5 +10,6 @@ public class CcHardware implements ModInitializer {
     public void onInitialize() {
         ModItems.initialize();
         ModBlocks.initialize();
+        ModBlockEntities.initialize();
     }
 }

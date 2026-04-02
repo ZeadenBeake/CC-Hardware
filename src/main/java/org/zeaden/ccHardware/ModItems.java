@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -15,10 +15,10 @@ import java.util.function.Function;
 public class ModItems {
     public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
         // Create the item key.
-        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(CcHardware.MOD_ID, name));
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, new ResourceLocation(CcHardware.MOD_ID, name));
 
         // Create the item instance.
-        T item = itemFactory.apply(settings.setId(itemKey));
+        T item = itemFactory.apply(settings);
 
         // Register the item.
         Registry.register(BuiltInRegistries.ITEM, itemKey, item);
