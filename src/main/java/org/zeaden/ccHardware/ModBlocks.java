@@ -12,6 +12,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import org.zeaden.ccHardware.blocks.AdvancedCaseBlock;
+import org.zeaden.ccHardware.blocks.KeyboardBlock;
+import org.zeaden.ccHardware.blocks.NormalCaseBlock;
 
 import java.util.function.Function;
 
@@ -46,13 +49,27 @@ public class ModBlocks {
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register((itemGroup) -> {
-            itemGroup.accept(ModBlocks.COMPUTER_CASE.asItem());
+            itemGroup.accept(ModBlocks.NORMAL_CASE.asItem());
+            itemGroup.accept(ModBlocks.ADVANCED_CASE.asItem());
+            itemGroup.accept(ModBlocks.KEYBOARD_FULL.asItem());
         });
     };
 
-    public static final Block COMPUTER_CASE = register(
-            "computer_case",
-            ComputerCaseBlock::new,
+        public static final Block KEYBOARD_FULL = register(
+            "keyboard_full",
+            KeyboardBlock::new,
+            BlockBehaviour.Properties.of().sound(SoundType.METAL),
+            true
+    );
+    public static final Block NORMAL_CASE = register(
+            "computer_case_normal",
+            NormalCaseBlock::new,
+            BlockBehaviour.Properties.of().sound(SoundType.METAL),
+            true
+    );
+    public static final Block ADVANCED_CASE = register(
+            "computer_case_advanced",
+            AdvancedCaseBlock::new,
             BlockBehaviour.Properties.of().sound(SoundType.METAL),
             true
     );

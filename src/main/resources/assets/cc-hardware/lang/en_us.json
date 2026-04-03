@@ -1,3 +1,6 @@
 {
-  "item.cc-hardware.suspicious_substance": "Suspicious Substance"
+  "item.cc-hardware.suspicious_substance": "Suspicious Substance",
+  "block.cc-hardware.computer_case_normal": "Computer Case",
+  "block.cc-hardware.computer_case_advanced": "Advanced Computer Case",
+  "block.cc-hardware.keyboard_full": "Keyboard"
 }

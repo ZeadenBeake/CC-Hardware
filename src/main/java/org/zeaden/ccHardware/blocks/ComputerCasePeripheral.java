@@ -1,13 +1,13 @@
-package org.zeaden.ccHardware;
+package org.zeaden.ccHardware.blocks;
 
 import dan200.computercraft.api.lua.LuaFunction;
 import dan200.computercraft.api.peripheral.IPeripheral;
 
 public class ComputerCasePeripheral implements IPeripheral {
 
-    private final ComputerCaseBlockEntity blockEntity;
+    private final AbstractCaseBlockEntity blockEntity;
 
-    public ComputerCasePeripheral(ComputerCaseBlockEntity blockEntity) {
+    public ComputerCasePeripheral(AbstractCaseBlockEntity blockEntity) {
         this.blockEntity = blockEntity;
     }
 
