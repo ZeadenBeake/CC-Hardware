@@ -11,9 +11,9 @@ public class CcHardware implements ModInitializer {
         ModItems.initialize();
         ModBlocks.initialize();
         ModBlockEntities.initialize();
-        PeripheralLookup.get().registerForBlockEntity(
-                ComputerCaseBlockEntity::getPeripheral,
-                ModBlockEntities.COMPUTER_CASE_BLOCK_ENTITY
-        );
+//        PeripheralLookup.get().registerForBlockEntity(
+//                ComputerCaseBlockEntity::getPeripheral,
+//                ModBlockEntities.COMPUTER_CASE_BLOCK_ENTITY
+//        );
     }
 }
