@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north,state=off":      { "model": "cc-hardware:block/computer_case_advanced" },
+    "facing=south,state=off":      { "model": "cc-hardware:block/computer_case_advanced", "y": 180 },
+    "facing=east,state=off":       { "model": "cc-hardware:block/computer_case_advanced", "y": 90 },
+    "facing=west,state=off":       { "model": "cc-hardware:block/computer_case_advanced", "y": 270 },
+    "facing=north,state=on":       { "model": "cc-hardware:block/computer_case_advanced" },
+    "facing=south,state=on":       { "model": "cc-hardware:block/computer_case_advanced", "y": 180 },
+    "facing=east,state=on":        { "model": "cc-hardware:block/computer_case_advanced", "y": 90 },
+    "facing=west,state=on":        { "model": "cc-hardware:block/computer_case_advanced", "y": 270 },
+    "facing=north,state=blinking": { "model": "cc-hardware:block/computer_case_advanced" },
+    "facing=south,state=blinking": { "model": "cc-hardware:block/computer_case_advanced", "y": 180 },
+    "facing=east,state=blinking":  { "model": "cc-hardware:block/computer_case_advanced", "y": 90 },
+    "facing=west,state=blinking":  { "model": "cc-hardware:block/computer_case_advanced", "y": 270 }
+  }
+}

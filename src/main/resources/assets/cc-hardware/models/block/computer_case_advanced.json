@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "cc-hardware:block/computer_advanced_top",
+    "front": "cc-hardware:block/computer_advanced_side",
+    "side": "cc-hardware:block/computer_advanced_side",
+    "bottom": "cc-hardware:block/computer_advanced_top"
+  }
+}

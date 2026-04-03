@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/orientable_with_bottom",
-  "textures": {
-    "top": "cc-hardware:block/normal_case_top",
-    "front": "cc-hardware:block/normal_case_side",
-    "side": "cc-hardware:block/normal_case_side",
-    "bottom": "cc-hardware:block/normal_case_top"
-  }
-}

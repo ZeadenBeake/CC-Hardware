@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "cc-hardware:block/normal_case" },
-    "facing=south": { "model": "cc-hardware:block/normal_case", "y": 180 },
-    "facing=east":  { "model": "cc-hardware:block/normal_case", "y": 90 },
-    "facing=west":  { "model": "cc-hardware:block/normal_case", "y": 270 }
-  }
-}
