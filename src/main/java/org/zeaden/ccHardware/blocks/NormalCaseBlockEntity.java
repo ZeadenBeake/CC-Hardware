@@ -1,9 +1,15 @@
 package org.zeaden.ccHardware.blocks;
 
 import dan200.computercraft.shared.computer.core.ComputerFamily;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.block.state.BlockState;
 import org.zeaden.ccHardware.ModBlockEntities;
+import org.zeaden.ccHardware.menu.NormalCaseMenu;
+import net.minecraft.network.FriendlyByteBuf;
 
 public class NormalCaseBlockEntity extends AbstractCaseBlockEntity {
 
@@ -17,6 +23,13 @@ public class NormalCaseBlockEntity extends AbstractCaseBlockEntity {
 
     public NormalCaseBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.NORMAL_CASE_BLOCK_ENTITY, pos, state, ComputerFamily.NORMAL, INVENTORY_SIZE);
+    }
+
+    @Override
+    public AbstractContainerMenu createMenu(int syncId, Inventory inventory, Player player) {
+        FriendlyByteBuf buf = PacketByteBufs.create();
+        buf.writeBlockPos(getBlockPos());
+        return new NormalCaseMenu(syncId, inventory, this);
     }
 
     @Override

@@ -16,6 +16,7 @@ public class CcHardware implements ModInitializer {
         ModBlocks.initialize();
         ModBlockEntities.initialize();
         KeyInputPacket.register();
+        ModMenuTypes.initialize();
         PeripheralLookup.get().registerForBlockEntity(
                 (blockEntity, side) -> blockEntity.getPeripheral(),
                 ModBlockEntities.KEYBOARD_BLOCK_ENTITY
